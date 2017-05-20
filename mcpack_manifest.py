@@ -23,6 +23,7 @@ for i in listdir():
     if i[:22] == "Microsoft.MinecraftUWP":
         changed = True
         chdir(i)
+        break
 
 # This will trigger if Win10 Minecraft isn't installed
 if not changed:
