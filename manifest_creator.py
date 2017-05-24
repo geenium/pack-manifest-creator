@@ -44,7 +44,7 @@ behaviour pack!\n>> ")
     if pack == "r":
         input_type = "resource"
         manifest_type = "resources"
-    # Sets ceratian values for behaviour packs
+    # Sets certain values for behaviour packs
     else:
         input_type = "behavior"
         manifest_type = "data"
@@ -93,7 +93,7 @@ Overwrite existing manifest? y/n\n>> ".format(input_type.title())).lower()
     if overwrite == "y":
         create_manifest(name + sep + "manifest.json")
     # If the existing manifest doesn't want to be overwritten
-    # Prints Unsuccessful message
+    # Prints unsuccessful message
     else:
         print("New manifest not created...")
 
