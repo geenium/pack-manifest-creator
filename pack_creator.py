@@ -139,7 +139,7 @@ behaviour pack!\n>> ")
     if not os_path.exists(name):
         makedirs(name)
         # Writes the manifest file
-        create_manifest(name + sep + "manifest.json", name, input_type,
+        create_manifest(name + sep + "manifest.json", name, manifest_type,
                         description)
     # Stops the program from automatically overwriting existing manifests
     else:
