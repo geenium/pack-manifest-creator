@@ -43,7 +43,7 @@ def create_manifest(name, data_type, description):
     print("New {} pack manifest successfully created!\n".format(data_type))
 
 
-# Creates the zip folder for new resourcepacks and behaviour packs
+# Gathers information for new resourcepacks and behaviour packs
 def new_manifest():
     # Asks whether a resourcepack or behaviour pack should be made
     pack = input("Do you want a resource pack or behaviour pack? (r/b)\n\
