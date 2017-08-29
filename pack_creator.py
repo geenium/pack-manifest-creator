@@ -71,10 +71,6 @@ behaviour pack!\n>> ")
 
     create_manifest(name, manifest_type, description)
 
-# # # # # # # # # # # # # # # # # #
-# This is where the script begins #
-# # # # # # # # # # # # # # # # # #
-
 # Asks if a new pack should be created, if not the program stops
 while yes_no(input("Do you want to create a new pack? (y/n)\n>> ").lower()):
     new_manifest()
