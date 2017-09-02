@@ -1,4 +1,4 @@
-from os import makedirs, getenv, listdir, chdir, getcwd, remove, rename
+from os import getcwd, remove, rename
 from shutil import make_archive
 from uuid import uuid4 as new_uuid
 from os import path as os_path
@@ -18,8 +18,8 @@ def create_manifest(name, data_type, description):
     file = "manifest.json"
     with open(file, "w") as f:
         # Contents of the manifest for behaviour/resource packs
-        contents = '{{\n\t"format_version": 1,\n\t"header": {{{}\
-\n\t\t"name": "{}",\n\t\t"uuid": "{}",\
+        contents = '{{\n\t"format_version": 1,\n\t"header": {{\
+\n\t\t"description": "{}",\n\t\t"name": "{}",\n\t\t"uuid": "{}",\
 \n\t\t"version": [ 0, 0, 1 ]\n\t}},\n\t"modules": [\n\t\t{{\
 \n\t\t\t"type": "{}",\n\t\t\t"uuid": "{}",\n\t\t\t"version": [ 0, 0, 1 ]\
 \n\t\t}}\n\t]\n}}'
@@ -73,8 +73,8 @@ pack, or 's' for skin pack!\n>> ").lower()
     # Skin packs don't need a description
     description = ""
     if pack != "s":
-        description = '\n\t\t"description": "{}",'.format(input("What will \
-the description for the {} pack be?\n>> ".format(input_type)))
+        description = input("What will \
+the description for the {} pack be?\n>> ".format(input_type))
 
     create_manifest(name, manifest_type, description)
 
