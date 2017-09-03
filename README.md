@@ -1,4 +1,4 @@
 # win10-Minecraft-pack-creator
-Python script, which initialises new Minecraft Win10 behaviour packs or resource packs with a manifest.json file.
+Python script, which initialises new Minecraft Win10 behaviour packs, resource packs, or skin packs with a manifest.json file.
 
-Also allows for default assets to be extracted and placed into the new pack.
+The script will produce a blank mcpack file with just a manifest.json located within.
