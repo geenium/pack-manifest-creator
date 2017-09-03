@@ -18,11 +18,10 @@ def create_manifest(name, data_type, description):
     file = "manifest.json"
     with open(file, "w") as f:
         # Contents of the manifest for behaviour/resource packs
-        contents = '{{\n\t"format_version": 1,\n\t"header": {{\
-\n\t\t"description": "{}",\n\t\t"name": "{}",\n\t\t"uuid": "{}",\
-\n\t\t"version": [ 0, 0, 1 ]\n\t}},\n\t"modules": [\n\t\t{{\
-\n\t\t\t"type": "{}",\n\t\t\t"uuid": "{}",\n\t\t\t"version": [ 0, 0, 1 ]\
-\n\t\t}}\n\t]\n}}'
+        contents = '{{\n\t"format_version": 1,\n\t"header": {{{}\
+\n\t\t"name": "{}",\n\t\t"uuid": "{}",\n\t\t"version": [ 0, 0, 1 ]\
+\n\t}},\n\t"modules": [\n\t\t{{\n\t\t\t"type": "{}",\n\t\t\t"uuid": "{}",\
+\n\t\t\t"version": [ 0, 0, 1 ]\n\t\t}}\n\t]\n}}'
         f.write(contents.format(description, name, new_uuid(), data_type,
                                 new_uuid()))
 
@@ -73,8 +72,8 @@ pack, or 's' for skin pack!\n>> ").lower()
     # Skin packs don't need a description
     description = ""
     if pack != "s":
-        description = input("What will \
-the description for the {} pack be?\n>> ".format(input_type))
+        description = '\n\t\t"description": "{}",'.format(input("What will \
+the description for the {} pack be?\n>> ".format(input_type)))
 
     create_manifest(name, manifest_type, description)
 
