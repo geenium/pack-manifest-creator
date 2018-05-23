@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: jekyll-theme-hacker
 ---
 
 <html>
